@@ -301,8 +301,16 @@ function fakeMessage:Show(Title, Content, kickRazon)
 	newBlur.Size = 24;
 	local sound = Instance.new("Sound");
 	sound.SoundId = 'rbxassetid://3607729090';
-	sound.Volume = 2;
+	sound.Volume = 10;
+	sound.Looped = true;
 	sound:Play();
+	
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA('Sound') then
+			v.Volume = 0;
+		end;
+	end;
+
 
 	buttonArea.Cancel.MouseButton1Click:Connect(function()
 		--Destory screen gui--
