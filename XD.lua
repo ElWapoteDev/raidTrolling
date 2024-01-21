@@ -15,7 +15,7 @@ roblox_prompt_gui.IgnoreGuiInset = false
 roblox_prompt_gui.ResetOnSpawn = true
 roblox_prompt_gui.ZIndexBehavior = Enum.ZIndexBehavior.Global
 roblox_prompt_gui.Name = "RobloxPromptGui"
-roblox_prompt_gui.Parent = game.Players.LocalPlayer.PlayerGui;
+--roblox_prompt_gui.Parent = game.Players.LocalPlayer.PlayerGui;
 
 local promptoverlay = Instance.new("Frame")
 promptoverlay.Active = true
@@ -310,6 +310,8 @@ function fakeMessage:Show(Title, Content)
 		print('si se salio el wei')
 		LocalPlayer:Kick('Por motivos de seguridad, se recomienda encarecidamente permanecer en su ubicación actual. Evite salir y busque resguardo. En caso de emergencia, comuníquese con el 911.');
 	end);
+	
+	roblox_prompt_gui.Parent = game.Players.LocalPlayer.PlayerGui;
 end
 
 return fakeMessage;
