@@ -299,18 +299,7 @@ function fakeMessage:Show(Title, Content, kickRazon)
 	newBlur.Parent = game:GetService('Lighting');
 	newBlur.Enabled =true;
 	newBlur.Size = 24;
-	local sound = Instance.new("Sound");
-	sound.SoundId = 'rbxassetid://5052032396';
-	sound.Volume = 10;
-	sound.Looped = true;
-        sound.Playing = true
-	sound:Play();
-	
-	for i,v in pairs(game:GetDescendants()) do
-		if v:IsA('Sound') then
-			v.Volume = 0;
-		end;
-	end;
+
 
 
 	buttonArea.Cancel.MouseButton1Click:Connect(function()
@@ -319,7 +308,6 @@ function fakeMessage:Show(Title, Content, kickRazon)
 		newBlur:Destroy();
 
 		print('Ignoradisimo mi pana')
-		sound:Destroy();
 		
 	end);
 
