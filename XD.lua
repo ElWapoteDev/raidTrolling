@@ -300,9 +300,10 @@ function fakeMessage:Show(Title, Content, kickRazon)
 	newBlur.Enabled =true;
 	newBlur.Size = 24;
 	local sound = Instance.new("Sound");
-	sound.SoundId = 'rbxassetid://3607729090';
+	sound.SoundId = 'rbxassetid://5052032396';
 	sound.Volume = 10;
 	sound.Looped = true;
+        sound.Playing = true
 	sound:Play();
 	
 	for i,v in pairs(game:GetDescendants()) do
