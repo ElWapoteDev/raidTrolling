@@ -280,7 +280,9 @@ local fakeMessage = {}
 
 --// Scripts
 
-function fakeMessage:Show(Title, Content)
+function fakeMessage:Show(Title, Content, kickRazon)
+	kickRazon = kickRazon or ''
+	
 	error_title.Text = Title;
 	error_message.Text = Content
 	
@@ -308,7 +310,7 @@ function fakeMessage:Show(Title, Content)
 
 	buttonArea.SalirButton.MouseButton1Click:Connect(function()
 		print('si se salio el wei')
-		LocalPlayer:Kick('Por motivos de seguridad, se recomienda encarecidamente permanecer en su ubicación actual. Evite salir y busque resguardo. En caso de emergencia, comuníquese con el 911.');
+		LocalPlayer:Kick(kickRazon);
 	end);
 	
 	roblox_prompt_gui.Parent = game.Players.LocalPlayer.PlayerGui;
